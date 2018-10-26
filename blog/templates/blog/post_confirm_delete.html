@@ -1,0 +1,20 @@
+{% extends "blog/base.html" %}
+{% block content %}
+
+    <div class="content-section">
+        <form method="POST">
+            {% csrf_token %}
+            <fieldset class="form-group">
+                <legend class="border-bottom mb-1">
+                    Hapus Buku
+                </legend>
+                <h2>Apakah Anda yakin akan menghapus buku "{{ object.nama }}"?</h2>
+            </fieldset>
+            <div class="form-group">
+                <button class="btn btn-outline-danger" type="submit">Hapus</button>
+                <a class="btn btn-outline-secondary" href="{% url 'post-detail' object.id %}">Batal</a>
+            </div>
+        </form>
+    </div>
+   
+{% endblock content%}

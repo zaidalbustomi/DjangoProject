@@ -1,0 +1,11 @@
+{% extends "blog/base.html" %}
+{% block content %}
+<h2>
+    Anda telah keluar
+</h2>
+    <div class="border-top pt-3">
+        <small class="text-muted">
+            <a href="{% url 'login' %}">Masuk Kembali</a>
+        </small>
+    </div>
+{% endblock content%}
